@@ -29,6 +29,12 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Composables',
+        items: [
+          { text: 'Introduction', link: '/composables/introduction' },
+        ]
+      },
+      {
         text: 'About',
         items: [
           { text: 'Q&A', link: '/about/q&a' },

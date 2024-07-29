@@ -73,7 +73,7 @@ export default defineNuxtModule<ModuleOptions>({
     for (const composable of composables) {
       addImports({
         name: composable,
-        as: composable,
+        as: 'useMgl' + composable.slice(3),
         from: '@indoorequal/vue-maplibre-gl'
       })
     }
