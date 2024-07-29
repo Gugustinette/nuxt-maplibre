@@ -3,7 +3,6 @@
     :map-style="style"
     :center="center"
     :zoom="zoom"
-    :attribution-control="false"
   >
     <MglNavigationControl />
   </MglMap>

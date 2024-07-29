@@ -21,7 +21,6 @@ This is only possible in a client-side environment. You should either :
     :map-style="style"
     :center="center"
     :zoom="zoom"
-    :attributionControl="false"
   >
     <MglNavigationControl />
   </MglMap>
@@ -55,7 +54,6 @@ const zoom = 8;
   :map-style="style"
   :center="center"
   :zoom="zoom"
-  :attributionControl="false"
   height="500px"
 >
   <MglNavigationControl />
