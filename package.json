@@ -1,6 +1,6 @@
 {
   "name": "nuxt-maplibre",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A Nuxt module to use MapLibre",
   "homepage": "https://gugustinette.github.io/nuxt-maplibre",
   "repository": "https://github.com/gugustinette/nuxt-maplibre",
