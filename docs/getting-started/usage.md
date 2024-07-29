@@ -37,10 +37,14 @@ const zoom = 8;
 And here is how it should look :
 
 <script setup>
-import {
-  MglMap,
-  MglNavigationControl,
-} from '@indoorequal/vue-maplibre-gl';
+import { defineClientComponent } from 'vitepress'
+
+const MglMap = defineClientComponent(() => {
+  return import('@indoorequal/vue-maplibre-gl').then(m => m.MglMap)
+})
+const MglNavigationControl = defineClientComponent(() => {
+  return import('@indoorequal/vue-maplibre-gl').then(m => m.MglNavigationControl)
+})
 
 const style = 'https://api.maptiler.com/maps/streets/style.json?key=cQX2iET1gmOW38bedbUh';
 const center = [-1.559482, 47.21322];
