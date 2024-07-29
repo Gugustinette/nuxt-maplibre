@@ -2,7 +2,7 @@
 
 ## v1.0.0
 
-Initial Release
+This is the initial release, which automatically imports the MapLibre CSS, Vue components and composables.
 
 ### ✨ Changes
 
