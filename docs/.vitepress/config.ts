@@ -5,7 +5,7 @@ export default defineConfig({
   title: "Nuxt Maplibre",
   description: "Documentation for the Nuxt Maplibre module",
   head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
-  base: '/',
+  base: process.env.NODE_ENV === 'production' ? '/nuxt-maplibre/' : '/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
