@@ -1,0 +1,38 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+      - 'src/**'
+      - 'test/**'
+      - 'playground/**'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'package.json'
+      - 'package-lock.json'
+      - 'src/**'
+      - 'test/**'
+      - 'playground/**'
+
+jobs:
+    publish:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v4
+        - uses: actions/setup-node@v4
+          with:
+            node-version: 18
+            registry-url: https://registry.npmjs.org/
+        - run: npm ci
+        - name: Lint with ESLint
+          run: npm run lint
+        - name: Prepare testing with the playground
+          run: npm run dev:prepare
+        - name: Test package
+          run: npm run test

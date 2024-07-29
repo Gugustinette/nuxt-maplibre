@@ -1,0 +1,59 @@
+{
+  "name": "nuxt-maplibre",
+  "version": "0.0.1",
+  "description": "A Nuxt module to use MapLibre",
+  "homepage": "https://gugustinette.github.io/nuxt-maplibre",
+  "repository": "https://github.com/gugustinette/nuxt-maplibre",
+  "bugs": {
+    "url": "https://github.com/gugustinette/nuxt-maplibre/issues"
+  },
+  "license": "Apache-2.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build",
+    "dev": "nuxi dev playground",
+    "dev:host": "nuxi dev playground --host",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "release": "npm run lint && npm run test && npm run prepack && changelogen --release && npm publish && git push --follow-tags",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest watch",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "dependencies": {
+    "@indoorequal/vue-maplibre-gl": "^7.4.0",
+    "maplibre-gl": "^4.5.0"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxt/eslint-config": "^0.4.0",
+    "@nuxt/kit": "^3.12.4",
+    "@nuxt/module-builder": "^0.8.1",
+    "@nuxt/schema": "^3.12.4",
+    "@nuxt/test-utils": "^3.14.0",
+    "@nuxt/ui": "^2.18.2",
+    "@types/node": "^20.14.13",
+    "@typescript-eslint/eslint-plugin": "^7.17.0",
+    "caniuse-lite": "^1.0.30001643",
+    "changelogen": "^0.5.5",
+    "eslint": "^8.57.0",
+    "nuxt": "^3.12.4",
+    "vitepress": "^1.3.1",
+    "vitest": "^2.0.4"
+  }
+}
