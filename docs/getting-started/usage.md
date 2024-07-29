@@ -58,3 +58,7 @@ const zoom = 8;
 >
   <MglNavigationControl />
 </MglMap>
+
+::: tip
+If the map is not displayed but there's no error in the console, make sure you have set a height or width to the `MglMap` component.
+:::
