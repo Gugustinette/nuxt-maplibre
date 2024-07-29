@@ -24,7 +24,6 @@ export default defineConfig({
       },
       {
         text: 'Components',
-        collapsed: true,
         items: [
           { text: 'Introduction', link: '/components/introduction' },
         ]
