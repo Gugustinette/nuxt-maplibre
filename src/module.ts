@@ -1,4 +1,4 @@
-import { defineNuxtModule, addComponent } from '@nuxt/kit'
+import { defineNuxtModule, addComponent, addImports } from '@nuxt/kit'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
@@ -66,6 +66,15 @@ export default defineNuxtModule<ModuleOptions>({
         filePath: '@indoorequal/vue-maplibre-gl',
         chunkName: `nuxt-maplibre/${component}`,
         mode: 'all'
+      })
+    }
+
+    // Auto-import vue-maplibre-gl composables
+    for (const composable of composables) {
+      addImports({
+        name: composable,
+        as: composable,
+        from: '@indoorequal/vue-maplibre-gl'
       })
     }
   }

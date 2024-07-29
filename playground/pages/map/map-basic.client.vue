@@ -12,4 +12,10 @@
 const style = 'https://api.maptiler.com/maps/streets/style.json?key=cQX2iET1gmOW38bedbUh';
 const center = [-1.559482, 47.21322];
 const zoom = 8;
+
+const map = useMap();
+console.log(map.isLoaded)
+console.log(map.isMounted)
+console.log(map.instance)
+console.log(map.map)
 </script>
