@@ -1,8 +1,8 @@
 import { defineNuxtModule, addComponent, addImports } from '@nuxt/kit'
 
 // Module options TypeScript interface definition
-export interface ModuleOptions {
-}
+// eslint-disable-next-line
+export interface ModuleOptions {}
 
 // Components to export
 export const components = [
@@ -31,7 +31,7 @@ export const components = [
   'MglHillshadeLayer',
   'MglLineLayer',
   'MglRasterLayer',
-  'MglSymbolLayer'
+  'MglSymbolLayer',
 ]
 
 // Composition functions to export
@@ -41,7 +41,7 @@ export const composables = [
   'useDisposableLayer',
   'useLayer',
   'usePositionWatcher',
-  'useSource'
+  'useSource',
 ]
 
 export default defineNuxtModule<ModuleOptions>({
@@ -49,12 +49,12 @@ export default defineNuxtModule<ModuleOptions>({
     name: 'nuxt-maplibre',
     configKey: 'maplibre',
     compatibility: {
-      nuxt: '>=3.0.0'
-    }
+      nuxt: '>=3.0.0',
+    },
   },
   // Default configuration options of the Nuxt module
   defaults: {},
-  async setup (options, nuxt) {
+  async setup(options, nuxt) {
     // Add MapLibre's CSS
     nuxt.options.css.push('maplibre-gl/dist/maplibre-gl.css')
 
@@ -65,7 +65,7 @@ export default defineNuxtModule<ModuleOptions>({
         export: component,
         filePath: '@indoorequal/vue-maplibre-gl',
         chunkName: `nuxt-maplibre/${component}`,
-        mode: 'all'
+        mode: 'all',
       })
     }
 
@@ -74,8 +74,8 @@ export default defineNuxtModule<ModuleOptions>({
       addImports({
         name: composable,
         as: 'useMgl' + composable.slice(3),
-        from: '@indoorequal/vue-maplibre-gl'
+        from: '@indoorequal/vue-maplibre-gl',
       })
     }
-  }
+  },
 })
