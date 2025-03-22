@@ -37,8 +37,8 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
-    "@indoorequal/vue-maplibre-gl": "^7.4.0",
-    "maplibre-gl": "^4.5.0"
+    "@indoorequal/vue-maplibre-gl": "^8.0.0",
+    "maplibre-gl": "^5.0.0"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
