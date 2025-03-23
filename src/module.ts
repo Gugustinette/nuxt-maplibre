@@ -6,27 +6,31 @@ export interface ModuleOptions {}
 
 // Components to export
 export const components = [
+  'MglImage',
   'MglMap',
+  'MglMarker',
+  'MglPopup',
+  // Controls
   'MglAttributionControl',
   'MglCustomControl',
   'MglFullscreenControl',
   'MglGeolocateControl',
+  'MglLogoControl',
   'MglNavigationControl',
   'MglScaleControl',
-  'MglLogoControl',
-  'MglMarker',
-  'MglPopup',
+  // Sources
   'MglCanvasSource',
   'MglGeoJsonSource',
   'MglImageSource',
-  'MglRasterSource',
   'MglRasterDemSource',
+  'MglRasterSource',
   'MglVectorSource',
   'MglVideoSource',
+  // Layers
   'MglBackgroundLayer',
   'MglCircleLayer',
-  'MglFillLayer',
   'MglFillExtrusionLayer',
+  'MglFillLayer',
   'MglHeatmapLayer',
   'MglHillshadeLayer',
   'MglLineLayer',
