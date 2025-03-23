@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-const style = 'https://api.maptiler.com/maps/streets/style.json?key=cQX2iET1gmOW38bedbUh';
+const style = 'https://demotiles.maplibre.org/style.json';
 const center = [-1.559482, 47.21322];
 const zoom = 8;
 

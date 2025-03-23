@@ -1,5 +1,6 @@
 <template>
   <MglMap
+    map-style="https://demotiles.maplibre.org/style.json"
     :center="center"
     :zoom="zoom"
   >
