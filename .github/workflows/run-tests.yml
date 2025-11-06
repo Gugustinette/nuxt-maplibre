@@ -19,6 +19,7 @@ on:
       - 'src/**'
       - 'test/**'
       - 'playground/**'
+  workflow_dispatch:
 
 jobs:
     publish:
@@ -30,8 +31,8 @@ jobs:
             node-version: 18
             registry-url: https://registry.npmjs.org/
         - run: npm ci
-        # - name: Lint with ESLint
-        #   run: npm run lint
+        - name: Lint with ESLint
+          run: npm run lint
         - name: Prepare testing with the playground
           run: npm run dev:prepare
         - name: Test package
