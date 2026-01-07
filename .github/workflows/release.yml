@@ -11,7 +11,7 @@ jobs:
         - uses: actions/checkout@v4
         - uses: actions/setup-node@v4
           with:
-            node-version: 20
+            node-version: 24
             registry-url: https://registry.npmjs.org/
         - run: npm ci
         - name: Lint with ESLint
@@ -31,8 +31,6 @@ jobs:
         # Publish package to NPM
         - name: Publish package to NPM
           run: npm publish
-          env:
-            NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         # Push changes to GitHub (package.json and package-lock.json)
         - name: Push changes to GitHub
           run: git commit -am "Release ${{ github.event.release.tag_name }}" && git push origin HEAD:main
