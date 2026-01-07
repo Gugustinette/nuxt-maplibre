@@ -43,7 +43,6 @@ export const composables = [
   'useMap',
   'useControl',
   'useDisposableLayer',
-  'useLayer',
   'usePositionWatcher',
   'useSource',
 ]

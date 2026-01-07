@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "@indoorequal/vue-maplibre-gl": "^8.4.2",
-    "maplibre-gl": "^5.11.0"
+    "maplibre-gl": "^5.15.0"
   },
   "devDependencies": {
     "@nuxt/devtools": "^3.0.1",
