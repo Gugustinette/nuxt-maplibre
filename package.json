@@ -3,9 +3,9 @@
   "version": "1.2.0",
   "description": "A Nuxt module to use MapLibre",
   "homepage": "https://gugustinette.github.io/nuxt-maplibre",
-  "repository": "https://github.com/gugustinette/nuxt-maplibre",
+  "repository": "https://github.com/Gugustinette/nuxt-maplibre",
   "bugs": {
-    "url": "https://github.com/gugustinette/nuxt-maplibre/issues"
+    "url": "https://github.com/Gugustinette/nuxt-maplibre/issues"
   },
   "license": "Apache-2.0",
   "type": "module",
