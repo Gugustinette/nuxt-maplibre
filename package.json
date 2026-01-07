@@ -3,7 +3,10 @@
   "version": "1.2.0",
   "description": "A Nuxt module to use MapLibre",
   "homepage": "https://gugustinette.github.io/nuxt-maplibre",
-  "repository": "https://github.com/Gugustinette/nuxt-maplibre",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gugustinette/nuxt-maplibre.git"
+  },
   "bugs": {
     "url": "https://github.com/Gugustinette/nuxt-maplibre/issues"
   },
