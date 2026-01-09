@@ -1,8 +1,9 @@
 import { defineNuxtModule, addComponent, addImports } from '@nuxt/kit'
 
 // Module options TypeScript interface definition
-// eslint-disable-next-line
-export interface ModuleOptions {}
+export interface ModuleOptions {
+  css: string | false
+}
 
 // Components to export
 export const components = [
@@ -56,10 +57,14 @@ export default defineNuxtModule<ModuleOptions>({
     },
   },
   // Default configuration options of the Nuxt module
-  defaults: {},
+  defaults: {
+    css: 'maplibre-gl/dist/maplibre-gl.css',
+  },
   async setup(options, nuxt) {
     // Add MapLibre's CSS
-    nuxt.options.css.push('maplibre-gl/dist/maplibre-gl.css')
+    if (options.css) {
+      nuxt.options.css.push(options.css)
+    }
 
     // Auto-import vue-maplibre-gl components
     for (const component of components) {
