@@ -2,7 +2,7 @@ import { defineNuxtModule, addComponent, addImports } from '@nuxt/kit'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
-  css: string | false
+  css: string | string[] | false
 }
 
 // Components to export
