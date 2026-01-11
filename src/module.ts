@@ -63,7 +63,14 @@ export default defineNuxtModule<ModuleOptions>({
   async setup(options, nuxt) {
     // Add MapLibre's CSS
     if (options.css) {
-      nuxt.options.css.push(options.css)
+      // If an array was provided, spread it into the nuxt css array
+      if (Array.isArray(options.css)) {
+        nuxt.options.css.push(...options.css)
+      }
+      // Otherwise, just push the single string
+      else {
+        nuxt.options.css.push(options.css)
+      }
     }
 
     // Auto-import vue-maplibre-gl components
